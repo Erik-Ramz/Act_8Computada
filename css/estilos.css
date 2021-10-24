@@ -1,0 +1,109 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+html{font-size: 16px;}
+body{font-size: 0px;}
+header{
+    background-color: rgb(41, 189, 90);
+    text-align: center;
+    color: black;
+    font-size: 1.7rem;
+    padding: 10px 0px;
+    font-weight: bold;
+}
+section{
+    background-color: rgb(245, 235, 147);
+    padding: 10px;
+}
+article, fieldset{
+    width: 60%;
+    display: inline-block;
+    vertical-align: middle;
+    align-items: center;
+}
+fieldset{
+    width: 40%;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 1px solid black;
+}
+fieldset input{
+    display: block;
+    margin: 0px;
+    height: 30px;
+    width: 300px;
+    font-size: 1rem;
+
+    
+}
+button{
+    width: 30%;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: #df9e55;
+    color: #350213;
+    cursor: pointer;
+    border: 1px solid black;
+    font-size: 0.9rem;
+    font-family: arial;
+    font-weight: normal;
+}
+    button:hover{
+        background-color: #ddb180;
+    }
+legend{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+article{
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+article input{
+    margin: 0 auto;
+    height: 30px;
+    width: 75px;
+    font-size: 20px;
+}
+article button{
+    width: 30px;
+    height: 30px;
+}
+table{
+    margin: 0px;
+    width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+th{
+    background-color: #ff8800;
+    padding: 3px 0 3px;
+    font-size: 1rem;
+    text-align: left;
+}
+td{
+    border-bottom: 2px solid #350213;
+    padding: 5px;
+    width: 200px;
+}
+#titulos{
+    text-align: left;
+}
+#totales{
+    text-align: Center;
+}
+.dosColumnas{
+    width: 400px;
+}
+.fondo{
+    background-color: #bb1c1c36;
+}
+.texto{
+    font-size: 1.2rem;
+    color: rgb(143, 0, 0); 
+    font-weight: bold;
+    
+}
+#centrado{
+    text-align: center;
+}

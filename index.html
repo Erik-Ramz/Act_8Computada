@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Vue Propiedades Computadas</title>
+</head>
+    <body>
+        <header>Frutas</header>
+        <section id="main">
+            <article>
+                <table>
+                    <tr>
+                        <th colspan="4"></th>
+                    </tr>
+                    <tr v-for="(fruta,index) in frutas":class="{fondo:fruta.cantidad==0}">
+                        <td>
+                            <button @click="fruta.cantidad++">+</button>
+                            <input type="number" v-model.number="fruta.cantidad" id="centrado">
+                            <button @click="fruta.cantidad--":disabled="fruta.cantidad == 0" >-</button>
+                        </td>
+                        <td>{{fruta.nombre}}</td>
+                        <td v-if="fruta.cantidad > 0">${{fruta.precioUnitario}}/uni.</td>
+                        <td v-if="fruta.cantidad > 0">${{montoFruta(index)}}</td>
+                        <td colspan="2" class="dosColumnas" :class="{texto:fruta.cantidad == 0}" v-else> Sin stock</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" id="titulos">
+                            <h4>Subtotal:</h4>
+                            <h4>IVA:</h4>
+                            <h4>Total:</h4>
+                        </td>
+                        <td id="totales">
+                            <h4>${{calculoSubtotal}}</h4>
+                            <h4>${{calculoIva}}</h4>
+                            <h4>${{calculoTotal}}</h4>
+                        </td>
+                    </tr>
+                </table>
+            </article>
+            <fieldset class="col-6">
+                <legend>Nueva fruta</legend>
+                Nombre fruta: <center><input type="text" v-model="newFruta" placeholder="Introduce el nombre de la fruta"></center>
+                Cantidad: <center><input type="number" v-model.number="newCantidad"></center>
+                Precio: <center><input type="number" v-model.number="newPrecio"></center>
+                <button @click="agregar()">Agregar</button>
+            </fieldset>
+
+        </section>
+    </body>
+<script src="js/vue.js"></script>
+<script src="js/script.js"></script>
+</html>
